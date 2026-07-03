@@ -43,16 +43,16 @@
         extend: {
           colors: {
             brand: {
-              primary: '#4A6058',
-              hover: '#7D8D87',
-              accent1: '#97C6C2',
-              accent2: '#C1DDDA',
-              darkBg: '#080C14',
-              lightBg: '#F6F7FB',
-              heading: '#1F2122',
-              text: '#353738',
-              fundo: '#F9FAFB',
-              texto: '#111827'
+              primary: '#DC2626',
+              hover: '#B91C1C',
+              accent1: '#EF4444',
+              accent2: '#FCA5A5',
+              darkBg: '#0A0A0A',
+              lightBg: '#111111',
+              heading: '#FFFFFF',
+              text: '#D1D5DB',
+              fundo: '#0A0A0A',
+              texto: '#F3F4F6'
             }
           },
           fontFamily: {
@@ -65,7 +65,7 @@
   </script>
   
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2.0">
   
   <!-- Alpine.js CDN -->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
@@ -528,36 +528,31 @@
           </div>
         </div>
         
-        <!-- Formulário Rápido WhatsApp (65%) -->
-        <div class="lg:col-span-8 p-8 md:p-10 flex flex-col justify-center bg-white">
-          <h3 class="text-2xl font-bold font-outfit text-brand-heading mb-2">Agende Sua Aula Experimental</h3>
-          <p class="text-brand-text mb-6">Preencha seus dados para iniciar o agendamento rápido diretamente no WhatsApp.</p>
-          
-          <form onsubmit="handleBooking(event)" class="space-y-4 md:space-y-0 md:flex md:items-center md:space-x-4">
-            <div class="flex-1">
-              <label for="booking-name" class="sr-only">Seu Nome</label>
-              <input type="text" id="booking-name" placeholder="Digite seu nome completo" class="w-full px-5 py-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-primary text-gray-800 placeholder-gray-400" required>
+        <!-- CTA WhatsApp direto (65%) -->
+        <div class="lg:col-span-8 p-8 md:p-12 flex flex-col justify-center bg-[#111111]">
+          <div class="space-y-5">
+            <div class="inline-block bg-brand-primary/20 text-brand-accent1 px-4 py-1 rounded-full font-bold text-xs uppercase tracking-widest font-outfit">
+              AULA EXPERIMENTAL
             </div>
-            <div class="w-full md:w-64">
-              <label for="booking-modalidade" class="sr-only">Modalidade</label>
-              <select id="booking-modalidade" class="w-full px-5 py-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-primary text-gray-800 bg-white">
-                <option value="Muay Thai">Muay Thai</option>
-                <option value="Jiu-Jitsu">Jiu-Jitsu</option>
-                <option value="Taekwondo">Taekwondo</option>
-                <option value="Boxe">Boxe</option>
-                <option value="Muay Thai Feminino">Muay Thai Feminino</option>
-                <option value="Jiu-Jitsu Kids">Jiu-Jitsu Kids</option>
-                <option value="Muay Thai Kids">Muay Thai Kids</option>
-                <option value="Personal Fight">Personal Fight</option>
-                <option value="Treinamento Funcional">Treinamento Funcional</option>
-              </select>
+            <h3 class="text-2xl md:text-3xl font-bold font-outfit text-white leading-tight">Agende sua aula experimental direto pelo WhatsApp</h3>
+            <p class="text-[#9CA3AF] leading-relaxed">
+              Fale direto com a Go Fight pelo WhatsApp e consulte horários, turmas e aula experimental. Sem formulário, sem espera — resposta rápida.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+              <a href="https://wa.me/5551999345612?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Go%20Fight%20e%20quero%20informa%C3%A7%C3%B5es%20sobre%20as%20aulas." target="_blank"
+                 class="bg-brand-primary hover:bg-brand-hover text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-base">
+                <i class="fa-brands fa-whatsapp text-xl"></i> Chamar no WhatsApp
+              </a>
+              <a href="tel:+5551999345612"
+                 class="border border-white/20 hover:border-brand-primary text-white font-bold px-8 py-4 rounded-full transition-all duration-300 flex items-center justify-center gap-3 text-base">
+                <i class="fa-solid fa-phone"></i> (51) 99934-5612
+              </a>
             </div>
-            <div>
-              <button type="submit" class="w-full md:w-auto bg-brand-primary hover:bg-brand-hover text-white font-bold px-8 py-4 rounded-full shadow-lg transition-colors flex items-center justify-center gap-2 whitespace-nowrap">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Agendar Agora
-              </button>
-            </div>
-          </form>
+            <p class="text-xs text-[#6B7280] flex items-center gap-2 pt-1">
+              <i class="fa-solid fa-shield-halved text-brand-primary"></i>
+              Sem cadastro. Sem formulário. Só você e a Go Fight.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -1306,19 +1301,25 @@
           </div>
         </div>
         
-        <!-- Mapa Placeholder (50%) -->
-        <div class="lg:col-span-6">
-          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-96 w-full bg-brand-lightBg relative flex items-center justify-center">
-            <!-- Google Maps Placeholder Frame -->
-            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center space-y-4">
-              <i class="fa-solid fa-map-pin text-brand-primary text-5xl animate-bounce"></i>
-              <h4 class="font-bold text-brand-heading font-outfit">Av. Brasil, 1668 - Estância Velha</h4>
-              <p class="text-xs text-brand-text max-w-sm">Localizado no bairro Bela Vista, de fácil acesso para Novo Hamburgo, Ivoti e Portão.</p>
-              <a href="https://maps.google.com/?q=Av.+Brasil,+1668+-+Bela+Vista,+Estância+Velha+-+RS" target="_blank" class="bg-brand-primary hover:bg-brand-hover text-white text-xs font-bold px-6 py-2.5 rounded-full shadow transition-colors inline-flex items-center gap-2">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir no Google Maps
-              </a>
-            </div>
+        <!-- Google Maps Embed (50%) -->
+        <div class="lg:col-span-6 space-y-3">
+          <div class="rounded-2xl overflow-hidden shadow-xl border border-white/10 w-full" style="height:400px;">
+            <iframe
+              src="https://www.google.com/maps?q=Av.%20Brasil%2C%201668%20-%20Bela%20Vista%2C%20Est%C3%A2ncia%20Velha%20-%20RS&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização da Go Fight Artes Marciais — Av. Brasil, 1668, Estância Velha - RS"
+            ></iframe>
           </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Brasil%2C%201668%20-%20Bela%20Vista%2C%20Est%C3%A2ncia%20Velha%20-%20RS"
+             target="_blank"
+             class="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-hover text-white font-bold text-sm px-6 py-3 rounded-full shadow transition-all duration-300">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir no Google Maps
+          </a>
         </div>
       </div>
     </section>
@@ -1514,16 +1515,17 @@
         </ul>
       </div>
 
-      <!-- Coluna 4: Newsletter (30%) -->
+      <!-- Coluna 4: WhatsApp CTA (30%) -->
       <div class="lg:col-span-3 space-y-4">
-        <h3 class="font-bold font-outfit text-sm tracking-wider uppercase text-brand-accent1">Newsletter</h3>
-        <p class="text-xs text-gray-400 font-light">
-          Receba dicas de saúde, condicionamento físico e defesa pessoal direto no seu e-mail.
+        <h3 class="font-bold font-outfit text-sm tracking-wider uppercase text-brand-accent1">Fale Conosco</h3>
+        <p class="text-xs text-gray-400 font-light leading-relaxed">
+          Fale direto com a Go Fight pelo WhatsApp e consulte horários, turmas e aula experimental.
         </p>
-        <form onsubmit="handleNewsletter(event)" class="flex">
-          <input type="email" placeholder="Seu e-mail" class="bg-white/10 border border-white/15 px-4 py-2.5 rounded-l-full text-xs text-white focus:outline-none focus:ring-1 focus:ring-brand-primary placeholder-gray-500 w-full" required>
-          <button type="submit" class="bg-brand-primary hover:bg-brand-hover text-white text-xs font-bold px-4 py-2.5 rounded-r-full uppercase tracking-wider transition-colors">Cadastrar</button>
-        </form>
+        <a href="https://wa.me/5551999345612?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Go%20Fight%20e%20quero%20informa%C3%A7%C3%B5es%20sobre%20as%20aulas."
+           target="_blank"
+           class="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-hover text-white font-bold text-xs px-5 py-3 rounded-full shadow transition-all duration-300 w-full justify-center">
+          <i class="fa-brands fa-whatsapp text-base"></i> Chamar no WhatsApp
+        </a>
       </div>
     </div>
     
@@ -1548,6 +1550,6 @@
   </a>
 
   <!-- Custom Script -->
-  <script src="/assets/js/script.js?v=1.0"></script>
+  <script src="/assets/js/script.js?v=2.0"></script>
 </body>
 </html>
