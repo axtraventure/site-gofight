@@ -1,0 +1,101 @@
+empresa:
+  nome: "Go Fight Artes Marciais"
+  segmento: "Escola de Artes Marciais e Condicionamento Físico"
+  cidade: "Estância Velha"
+  estado: "RS"
+  pais: "BR"
+  telefone: "5551999345612"
+  whatsapp: "5551999345612"
+  endereco: "Av. Brasil, 1668 - Bela Vista, Estância Velha - RS"
+  horario: "Horários das aulas conforme a modalidade. Consulte a disponibilidade pelo WhatsApp."
+  bairros_atendidos: "Estância Velha, Ivoti, Novo Hamburgo, Portão e região"
+  google_maps_iframe: ""
+
+logo_path: "/assets/img/logo.png"
+
+redes_sociais:
+  instagram: "@gofightev"
+  facebook: "@gofightev"
+
+branding:
+  tom: "Profissional, moderno, motivador e acessível, transmitindo confiança, disciplina e evolução"
+  paleta:
+    primaria: ""
+    secundaria: ""
+    fundo: "#F9FAFB"
+    texto: "#111827"
+
+seo:
+  palavra_chave_principal: "Muay Thai em Estância Velha"
+  palavras_secundarias:
+    - "Jiu-Jitsu em Estância Velha"
+    - "Academia de Artes Marciais"
+    - "Muay Thai Feminino"
+    - "Muay Thai Kids"
+    - "Jiu-Jitsu Kids"
+    - "Taekwondo"
+    - "Boxe"
+    - "Personal Fight"
+    - "Treinamento Funcional"
+    - "Defesa Pessoal"
+    - "Academia de Lutas em Estância Velha"
+    - "Artes Marciais para Crianças"
+  area_atuacao: "Estância Velha, Ivoti, Novo Hamburgo, Portão e região"
+
+servicos:
+  - nome: "Muay Thai"
+    descricao: "Treinamentos para iniciantes e avançados com foco em condicionamento físico, técnica, disciplina e defesa pessoal."
+    slug: "muay-thai"
+
+  - nome: "Jiu-Jitsu"
+    descricao: "Aulas voltadas ao desenvolvimento técnico, autoconfiança, defesa pessoal e evolução constante."
+    slug: "jiu-jitsu"
+
+  - nome: "Taekwondo"
+    descricao: "Modalidade que desenvolve disciplina, coordenação motora, flexibilidade e respeito."
+    slug: "taekwondo"
+
+  - nome: "Boxe"
+    descricao: "Treinos completos para melhorar o condicionamento físico, resistência e técnicas de combate."
+    slug: "boxe"
+
+  - nome: "Muay Thai Feminino"
+    descricao: "Turmas exclusivas para mulheres com foco em saúde, defesa pessoal e qualidade de vida."
+    slug: "muay-thai-feminino"
+
+  - nome: "Jiu-Jitsu Kids"
+    descricao: "Aulas para crianças que estimulam disciplina, respeito, coordenação e desenvolvimento físico."
+    slug: "jiu-jitsu-kids"
+
+  - nome: "Muay Thai Kids"
+    descricao: "Treinamentos adaptados para crianças in um ambiente seguro e motivador."
+    slug: "muay-thai-kids"
+
+  - nome: "Personal Fight"
+    descricao: "Treinamento individualizado para quem busca resultados personalizados e acompanhamento exclusivo."
+    slug: "personal-fight"
+
+  - nome: "Funcional"
+    descricao: "Treinos funcionais voltados ao fortalecimento muscular, condicionamento físico e qualidade de vida."
+    slug: "funcional"
+
+diferenciais:
+  - "Atendimento próximo e personalizado"
+  - "Ambiente acolhedor para iniciantes e alunos avançados"
+  - "Aulas para crianças, jovens e adultos"
+  - "Turmas femininas, mistas e infantis"
+  - "Diversas modalidades em um único espaço"
+  - "Foco no desenvolvimento físico, disciplina e defesa pessoal"
+  - "Professores comprometidos com a evolução individual de cada aluno"
+  - "Estrutura preparada para todos os níveis de experiência"
+
+prova_social:
+  - "Depoimentos positivos de alunos"
+  - "Alunos de Estância Velha e região"
+  - "Resultados reais em condicionamento físico, disciplina e qualidade de vida"
+
+cta_principal: "Falar no WhatsApp"
+
+dominio: ""
+
+tipo_site: "one-page"
