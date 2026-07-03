@@ -1,0 +1,87 @@
+/* Custom CSS styling for Go Fight Artes Marciais */
+
+/* Enforce font family default fallback */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F9FAFB;
+  color: #111827;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+  color: #1F2122;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* offset for sticky header */
+}
+
+/* Custom 3D Flip Box Card styles for Process Section */
+.flip-box {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 50%;
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+/* Custom CSS Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #080C14;
+}
+::-webkit-scrollbar-thumb {
+  background: #4A6058;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7D8D87;
+}
+
+/* Floating WhatsApp Animation */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.5; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+
+.whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #25D366;
+  border-radius: 50%;
+  animation: pulse-ring 2s infinite;
+  z-index: -1;
+}
