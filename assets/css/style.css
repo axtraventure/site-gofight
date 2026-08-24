@@ -19,86 +19,124 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif;
   letter-spacing: -0.02em;
-  /* Default: herda do body (#F3F4F6) — sobrescrito por seção abaixo */
-}
-
-/* ═══════════════════════════════════════════════════════════
-   CONTRASTE POR SEÇÃO — Regra definitiva
-   Fundo escuro = texto claro | Fundo claro = texto escuro
-   ═══════════════════════════════════════════════════════════ */
-
-/* ── SEÇÕES COM FUNDO ESCURO (texto branco) ─────────────── */
-/* hero, acompanhamento, contato (CTA final), footer */
-#hero h1, #hero h2, #hero h3, #hero p, #hero span,
-#acompanhamento h2, #acompanhamento h3, #acompanhamento p, #acompanhamento span,
-#contato h2, #contato h3, #contato p,
-footer h3, footer p, footer span, footer li, footer a {
   color: #FFFFFF;
 }
 
-/* Sobre: sem bg explícito, herda body preto */
-#sobre h2, #sobre h3 { color: #FFFFFF; }
-#sobre p, #sobre span { color: #D1D5DB; }
+/* ═══════════════════════════════════════════════════════════
+   RESTURAÇÃO DE FUNDOS ESCUROS E CONTRASTE
+   ═══════════════════════════════════════════════════════════ */
 
-/* ── SEÇÕES COM FUNDO CLARO (texto escuro) ──────────────── */
-/* modalidades, como-funciona, diferenciais, depoimentos, localizacao, faq */
+/* 1. Fundos Escuros das Seções */
+#sobre,
+#value-details,
+#diferenciais,
+#area-atuacao {
+  background-color: #0F0F0F !important;
+}
 
-/* Títulos H2 principais das seções claras */
-#modalidades h2,
-#como-funciona h2,
+#brands,
+#servicos,
+#depoimentos,
+#faq {
+  background-color: #111111 !important;
+}
+
+#contato,
+footer {
+  background-color: #0A0A0A !important;
+}
+
+/* Seções claras (se houver, como modalidades e como-funciona) */
+#modalidades,
+#como-funciona,
+#localizacao {
+  background-color: #F4F4F5 !important;
+}
+
+/* 2. Textos Claros em Fundos Escuros (Globais) */
+#sobre h2, #sobre h3, #sobre h4, #sobre p, #sobre span,
+#diferenciais h2, #diferenciais h3, #diferenciais p, #diferenciais span,
+#depoimentos h2, #depoimentos h3, #depoimentos p, #depoimentos span,
+#faq h2, #faq h3, #faq p, #faq span,
+#contato h2, #contato p, #contato span,
+#acompanhamento h2, #acompanhamento p, #acompanhamento span,
+footer h3, footer p, footer span, footer li, footer a {
+  color: #E5E7EB;
+}
+
+#sobre h2, #sobre h3,
 #diferenciais h2,
 #depoimentos h2,
-#localizacao h2,
-#faq h2 {
-  color: #111111 !important;
-  opacity: 1;
-}
-
-/* H3/H4 nas seções claras */
-#modalidades h3, #modalidades h4,
-#como-funciona h3, #como-funciona h4,
-#diferenciais h3, #diferenciais h4,
-#depoimentos h3, #depoimentos h4,
-#localizacao h3, #localizacao h4,
-#faq h3, #faq h4 {
-  color: #111111 !important;
-}
-
-/* Parágrafos e spans nas seções claras */
-#modalidades p, #modalidades span:not([class*="text-brand"]),
-#como-funciona p, #como-funciona span:not([class*="text-brand"]),
-#diferenciais p, #diferenciais span:not([class*="text-brand"]),
-#depoimentos p, #depoimentos span:not([class*="text-brand"]),
-#localizacao p, #localizacao span:not([class*="text-brand"]),
-#faq p, #faq span:not([class*="text-brand"]) {
-  color: #444444 !important;
-}
-
-/* FAQ: perguntas (button > span) devem ser brancas pois o accordion tem fundo escuro */
-#faq .bg-\[\#1F1F1F\] span,
-#faq button span {
+#faq h2,
+#contato h2,
+#acompanhamento h2,
+footer h3 {
   color: #FFFFFF !important;
 }
 
-/* FAQ: respostas abertas */
-#faq .bg-\[\#18181B\],
-#faq [class*="bg-[#18"] {
-  color: #D1D5DB !important;
+/* 3. Cards Brancos da Seção Diferenciais (#diferenciais) */
+#diferenciais .bg-white {
+  background-color: #FFFFFF !important;
+  border-color: #E5E7EB !important;
 }
-
-/* ── CARDS BRANCOS (em qualquer seção) ───────────────────── */
-.bg-white h2, .bg-white h3, .bg-white h4 {
+#diferenciais .bg-white h3 {
   color: #111111 !important;
 }
-
-.bg-white p {
+#diferenciais .bg-white p {
   color: #444444 !important;
 }
 
-/* ── FOOTER: links e textos explícitos ───────────────────── */
+/* 4. Seção de Depoimentos (Card Escuro) */
+#depoimentos .bg-white {
+  background-color: #1A1A1A !important;
+  border-color: #2A2A2A !important;
+}
+#depoimentos .bg-white p {
+  color: #FFFFFF !important;
+}
+#depoimentos .bg-white h3 {
+  color: #FFFFFF !important;
+}
+#depoimentos .bg-white p.text-xs,
+#depoimentos .bg-white .text-gray-300 {
+  color: #D1D5DB !important;
+}
+
+/* 5. FAQ (Perguntas e Respostas) */
+#faq .bg-\[\#1F1F1F\] {
+  background-color: #1F1F1F !important;
+}
+#faq button span {
+  color: #FFFFFF !important;
+}
+#faq .bg-\[\#18181B\] {
+  background-color: #18181B !important;
+  color: #E5E7EB !important;
+}
+#faq .fa-chevron-down {
+  color: #E31E24 !important;
+}
+
+/* 6. Seções com Fundo Claro: Títulos e Parágrafos Escuros */
+#modalidades h2, #como-funciona h2, #localizacao h2 {
+  color: #111111 !important;
+}
+#modalidades h3, #como-funciona h3, #localizacao h3,
+#modalidades h4, #como-funciona h4, #localizacao h4 {
+  color: #111111 !important;
+}
+#modalidades p, #como-funciona p, #localizacao p,
+#modalidades span:not([class*="text-brand"]),
+#como-funciona span:not([class*="text-brand"]),
+#localizacao span:not([class*="text-brand"]) {
+  color: #444444 !important;
+}
+
+/* Footer links */
 footer a { color: #D1D5DB; }
 footer a:hover { color: #FFFFFF; }
 footer .text-brand-primary { color: #E31E24 !important; }
+
 
 
 
