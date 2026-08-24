@@ -10,86 +10,97 @@ body {
   color: #F3F4F6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', sans-serif;
-  letter-spacing: -0.02em;
-  /* Cor base para seções escuras (padrão do body) */
-  color: #FFFFFF;
-}
-
-/* Seções com fundo claro — títulos escuros */
-#diferenciais h2,
-#diferenciais h3,
-#diferenciais h4,
-#depoimentos h2,
-#depoimentos h3,
-#localizacao h2,
-#localizacao h3,
-#faq h2 {
-  color: #111111 !important;
-}
-
-/* Cards brancos dentro de qualquer seção — títulos escuros */
-.bg-white h3,
-.bg-white h4 {
-  color: #111111 !important;
-}
-
 /* Smooth scroll com offset para header fixo */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
 
-/* ───────────────────────────────────────────────────────────
-   Contraste de texto para seções com fundo escuro (brand-darkBg, #1F1F1F etc.)
-   Seções com fundo claro (bg-white, bg-brand-lightBg) são gerenciadas pelo Tailwind
-   ─────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+  /* Default: herda do body (#F3F4F6) — sobrescrito por seção abaixo */
+}
 
-/* Garante texto legível em qualquer container escuro */
-.bg-brand-darkBg h1,
-.bg-brand-darkBg h2,
-.bg-brand-darkBg h3,
-.bg-brand-darkBg h4,
-[style*="background-color:#0A0A0A"] h1,
-[style*="background-color:#0A0A0A"] h2 {
+/* ═══════════════════════════════════════════════════════════
+   CONTRASTE POR SEÇÃO — Regra definitiva
+   Fundo escuro = texto claro | Fundo claro = texto escuro
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── SEÇÕES COM FUNDO ESCURO (texto branco) ─────────────── */
+/* hero, acompanhamento, contato (CTA final), footer */
+#hero h1, #hero h2, #hero h3, #hero p, #hero span,
+#acompanhamento h2, #acompanhamento h3, #acompanhamento p, #acompanhamento span,
+#contato h2, #contato h3, #contato p,
+footer h3, footer p, footer span, footer li, footer a {
   color: #FFFFFF;
 }
 
-.bg-brand-darkBg p,
-.bg-brand-darkBg span:not(.text-brand-primary) {
-  color: #D1D5DB;
+/* Sobre: sem bg explícito, herda body preto */
+#sobre h2, #sobre h3 { color: #FFFFFF; }
+#sobre p, #sobre span { color: #D1D5DB; }
+
+/* ── SEÇÕES COM FUNDO CLARO (texto escuro) ──────────────── */
+/* modalidades, como-funciona, diferenciais, depoimentos, localizacao, faq */
+
+/* Títulos H2 principais das seções claras */
+#modalidades h2,
+#como-funciona h2,
+#diferenciais h2,
+#depoimentos h2,
+#localizacao h2,
+#faq h2 {
+  color: #111111 !important;
+  opacity: 1;
 }
 
-/* Cards brancos — textos legíveis */
-.bg-white h3,
-.bg-white .text-\[\#111111\],
-.bg-white h4 {
+/* H3/H4 nas seções claras */
+#modalidades h3, #modalidades h4,
+#como-funciona h3, #como-funciona h4,
+#diferenciais h3, #diferenciais h4,
+#depoimentos h3, #depoimentos h4,
+#localizacao h3, #localizacao h4,
+#faq h3, #faq h4 {
   color: #111111 !important;
 }
 
-.bg-white p,
-.bg-white span {
-  color: #444444;
-}
-
-/* Seções com fundo claro — parágrafos legíveis */
-#diferenciais p,
-#depoimentos p,
-#localizacao p,
-#localizacao h3 {
+/* Parágrafos e spans nas seções claras */
+#modalidades p, #modalidades span:not([class*="text-brand"]),
+#como-funciona p, #como-funciona span:not([class*="text-brand"]),
+#diferenciais p, #diferenciais span:not([class*="text-brand"]),
+#depoimentos p, #depoimentos span:not([class*="text-brand"]),
+#localizacao p, #localizacao span:not([class*="text-brand"]),
+#faq p, #faq span:not([class*="text-brand"]) {
   color: #444444 !important;
 }
 
-#diferenciais h2 {
-  color: #111111 !important;
-  opacity: 1;
+/* FAQ: perguntas (button > span) devem ser brancas pois o accordion tem fundo escuro */
+#faq .bg-\[\#1F1F1F\] span,
+#faq button span {
+  color: #FFFFFF !important;
 }
 
-#depoimentos h2 {
-  color: #111111 !important;
-  opacity: 1;
+/* FAQ: respostas abertas */
+#faq .bg-\[\#18181B\],
+#faq [class*="bg-[#18"] {
+  color: #D1D5DB !important;
 }
+
+/* ── CARDS BRANCOS (em qualquer seção) ───────────────────── */
+.bg-white h2, .bg-white h3, .bg-white h4 {
+  color: #111111 !important;
+}
+
+.bg-white p {
+  color: #444444 !important;
+}
+
+/* ── FOOTER: links e textos explícitos ───────────────────── */
+footer a { color: #D1D5DB; }
+footer a:hover { color: #FFFFFF; }
+footer .text-brand-primary { color: #E31E24 !important; }
+
+
 
 
 /* Badges / pills de seção */
