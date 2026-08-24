@@ -13,7 +13,26 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif;
   letter-spacing: -0.02em;
+  /* Cor base para seções escuras (padrão do body) */
   color: #FFFFFF;
+}
+
+/* Seções com fundo claro — títulos escuros */
+#diferenciais h2,
+#diferenciais h3,
+#diferenciais h4,
+#depoimentos h2,
+#depoimentos h3,
+#localizacao h2,
+#localizacao h3,
+#faq h2 {
+  color: #111111 !important;
+}
+
+/* Cards brancos dentro de qualquer seção — títulos escuros */
+.bg-white h3,
+.bg-white h4 {
+  color: #111111 !important;
 }
 
 /* Smooth scroll com offset para header fixo */
@@ -53,6 +72,25 @@ html {
 .bg-white span {
   color: #444444;
 }
+
+/* Seções com fundo claro — parágrafos legíveis */
+#diferenciais p,
+#depoimentos p,
+#localizacao p,
+#localizacao h3 {
+  color: #444444 !important;
+}
+
+#diferenciais h2 {
+  color: #111111 !important;
+  opacity: 1;
+}
+
+#depoimentos h2 {
+  color: #111111 !important;
+  opacity: 1;
+}
+
 
 /* Badges / pills de seção */
 .section-badge {

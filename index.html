@@ -837,14 +837,14 @@
                  x-transition:enter-start="opacity-0 scale-95"
                  x-transition:enter-end="opacity-100 scale-100"
                  class="space-y-6 text-center">
-              <p class="text-lg md:text-xl text-[#444444] italic font-normal leading-relaxed">
+              <p class="text-lg md:text-xl text-[#444444] italic font-normal leading-relaxed" style="color:#444444 !important;">
                 "<span x-text="slide.text"></span>"
               </p>
               <div class="flex flex-col items-center space-y-2">
                 <div class="w-14 h-14 rounded-full bg-brand-primary/10 border border-brand-primary/30 flex items-center justify-center font-bold text-brand-primary text-lg" x-text="slide.initials"></div>
                 <div>
-                  <h3 class="font-bold text-[#111111] text-base" x-text="slide.name"></h3>
-                  <p class="text-xs text-[#666666]" x-text="slide.role"></p>
+                  <h3 class="font-bold text-base" style="color:#111111 !important;" x-text="slide.name"></h3>
+                  <p class="text-xs" style="color:#555555 !important;" x-text="slide.role"></p>
                 </div>
               </div>
             </div>
