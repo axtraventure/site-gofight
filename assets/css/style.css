@@ -121,15 +121,23 @@ footer h3 {
 #modalidades h2, #como-funciona h2, #localizacao h2 {
   color: #111111 !important;
 }
-#modalidades h3, #como-funciona h3, #localizacao h3,
+#modalidades h3, #como-funciona h3:not(.bg-brand-darkBg *), #localizacao h3,
 #modalidades h4, #como-funciona h4, #localizacao h4 {
   color: #111111 !important;
 }
-#modalidades p, #como-funciona p, #localizacao p,
+#modalidades p, #como-funciona p:not(.bg-brand-darkBg *), #localizacao p,
 #modalidades span:not([class*="text-brand"]),
-#como-funciona span:not([class*="text-brand"]),
+#como-funciona span:not([class*="text-brand"]):not(.bg-brand-darkBg *),
 #localizacao span:not([class*="text-brand"]) {
   color: #444444 !important;
+}
+
+/* Cards Escuros em Seções Claras (como em Como Funcionam as Aulas) */
+#como-funciona .bg-brand-darkBg h3 {
+  color: #FFFFFF !important;
+}
+#como-funciona .bg-brand-darkBg p {
+  color: #E5E7EB !important;
 }
 
 /* Footer links */
