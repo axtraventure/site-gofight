@@ -23,58 +23,35 @@ html {
 }
 
 /* ───────────────────────────────────────────────────────────
-   Seções com fundo claro (sobre branco) — contraste dark
+   Contraste de texto para seções com fundo escuro (brand-darkBg, #1F1F1F etc.)
+   Seções com fundo claro (bg-white, bg-brand-lightBg) são gerenciadas pelo Tailwind
    ─────────────────────────────────────────────────────────── */
-#sobre,
-#value-details,
-#diferenciais,
-#area-atuacao {
-  background-color: #0F0F0F;
+
+/* Garante texto legível em qualquer container escuro */
+.bg-brand-darkBg h1,
+.bg-brand-darkBg h2,
+.bg-brand-darkBg h3,
+.bg-brand-darkBg h4,
+[style*="background-color:#0A0A0A"] h1,
+[style*="background-color:#0A0A0A"] h2 {
+  color: #FFFFFF;
 }
 
-#brands,
-#servicos,
-#depoimentos,
-#faq {
-  background-color: #111111;
-}
-
-/* Textos dentro das seções escuras */
-#sobre p,
-#value-details p,
-#diferenciais p,
-#area-atuacao p,
-#servicos p,
-#depoimentos p,
-#faq p {
+.bg-brand-darkBg p,
+.bg-brand-darkBg span:not(.text-brand-primary) {
   color: #D1D5DB;
 }
 
-/* Cards de serviço */
-#servicos .bg-white {
-  background-color: #1A1A1A !important;
-  border-color: #2A2A2A !important;
+/* Cards brancos — textos legíveis */
+.bg-white h3,
+.bg-white .text-\[\#111111\],
+.bg-white h4 {
+  color: #111111 !important;
 }
 
-/* Cards de diferenciais */
-#diferenciais .bg-brand-lightBg {
-  background-color: #1A1A1A !important;
-}
-
-/* FAQ accordion items */
-#faq .bg-white {
-  background-color: #1A1A1A !important;
-  border-color: #2A2A2A !important;
-}
-
-#faq .bg-brand-lightBg {
-  background-color: #222222 !important;
-}
-
-/* Depoimento card */
-#depoimentos .bg-white {
-  background-color: #1A1A1A !important;
-  border-color: #2A2A2A !important;
+.bg-white p,
+.bg-white span {
+  color: #444444;
 }
 
 /* Badges / pills de seção */
@@ -137,14 +114,32 @@ html {
 /* ───────────────────────────────────────────────────────────
    WhatsApp Button — pulsação animada
    ─────────────────────────────────────────────────────────── */
-@keyframes pulse-ring {
-  0%   { transform: scale(0.95); opacity: 1; }
-  50%  { transform: scale(1.12); opacity: 0.4; }
-  100% { transform: scale(1.25); opacity: 0; }
+/* Floating WhatsApp Button — guaranteed bottom-right on all devices */
+.whatsapp-btn {
+  position: fixed !important;
+  right: 24px !important;
+  bottom: 24px !important;
+  left: auto !important;
+  z-index: 9999 !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  background-color: #25D366 !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35) !important;
+  text-decoration: none !important;
 }
 
-.whatsapp-btn {
-  position: relative;
+@media (max-width: 640px) {
+  .whatsapp-btn {
+    right: 18px !important;
+    bottom: 18px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
 }
 
 .whatsapp-btn::before {
@@ -158,6 +153,12 @@ html {
   border-radius: 50%;
   animation: pulse-ring 2s infinite;
   z-index: -1;
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(0.95); opacity: 1; }
+  50%  { transform: scale(1.12); opacity: 0.4; }
+  100% { transform: scale(1.25); opacity: 0; }
 }
 
 /* ───────────────────────────────────────────────────────────
